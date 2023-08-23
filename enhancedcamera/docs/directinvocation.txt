@@ -1,0 +1,8 @@
+title Direct Invocation
+
+User->UI Subsystem: Click's up arrow
+UI Subsystem->+Target Subsystem: moveMotor(Z, 100)
+Target Subsystem-->-UI Subsystem: Current coordinates
+UI Subsystem->UI Subsystem: update coords
+UI Subsystem->UI Subsystem: redraw
+

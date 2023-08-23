@@ -1,0 +1,11 @@
+title Indirect Invocation
+
+User->UISys: Click's up arrow
+UISys->MEBus: publishMessage(TargetSys)
+MEBus->TargetSys: enqueueMessage()
+TargetSys->TargetSys: readQueue()
+TargetSys->TargetSys: moveMotor(Z, 100)
+TargetSys->MEBus: publishMessage(UISys)
+MEBus->UISys:enqueueMessage()
+UISys->UISys:readQueue()
+UISys->UISys:redraw()
